@@ -42,13 +42,6 @@ class ControlFrame extends PApplet {
       .setPosition(30, h-110)
       .setSize(290, 30);
 
-    cp5.addToggle("React")
-      .setPosition(30, h-70)
-      .plugTo(parent, "music")
-      .setCaptionLabel("")
-      .setSize(50, 20)
-      .setValue(false)
-      ;
 
     cp5.addSlider("Angle")
       .plugTo(parent, "a")
@@ -56,14 +49,6 @@ class ControlFrame extends PApplet {
       .setValue(720)
       .setPosition(30, h-220)
       .setSize(290, 20);
-
-
-    cp5.addSlider("Reactivity")
-      .plugTo(parent, "soundFactor")
-      .setRange(1, 100)
-      .setValue(0)
-      .setPosition(90, h-70)
-      .setSize(230, 20);
 
     cp5.addColorWheel("COLOR", 30, h-190, 80 ).setRGB(color(50, 50, 200)).setCaptionLabel("");
   }

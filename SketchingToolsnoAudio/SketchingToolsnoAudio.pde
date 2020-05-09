@@ -1,7 +1,4 @@
 import controlP5.*;
-//import ddf.minim.*;
-//import ddf.minim.analysis.*;
-import spout.*;
 
 PImage[] myEmos = new PImage[8];
 boolean start=false;
@@ -21,17 +18,6 @@ float soundForce=1;
 //boolean music = true;
 boolean rotate=false;
 
-//Minim minim;
-//AudioPlayer groove;
-//BeatDetect beat;
-
-//AudioInput in;
-
-//AudioSample kick;
-//AudioSample snare;
-
-Spout spout;
-
 void settings() {
   size(1500, 850);
  
@@ -47,30 +33,10 @@ void setup() {
     myEmos [i] = loadImage( "em"+i+".png");
   }
   background(background);
-
- // minim = new Minim(this);
- // groove = minim.loadFile("groove.mp3", 1024);
-  //groove.loop();
-
-  //minim.debugOn();
-  //in = minim.getLineIn(Minim.STEREO, 512);
- // in = minim.getLineIn(Minim.STEREO, 512);
-
-  // a beat detection object song SOUND_ENERGY mode with a sensitivity of 10 milliseconds
- // beat = new BeatDetect();
-
-
- // spout = new Spout(this);
- // spout.createSender("Spout Processing");
 }
 
+
 void draw() {
-  //beat.detect(groove.mix);
-  //if (music == true) {
-  //  soundForce=soundFactor*groove.right.level();
-  //} else {
-  //  soundForce=1;
-  //}
   float randox= random(-rando-soundForce, rando+soundForce);
   float randoy= random(-rando-soundForce, rando+soundForce);
 
@@ -87,7 +53,7 @@ void draw() {
 
   start=true;
   println(rotate);
- // spout.sendTexture();
+
 }
 
 void keyPressed() {
@@ -115,11 +81,6 @@ void keyPressed() {
   }
 
 
-
-
-  //if ((key == 'm')&&(music==true)) {
-  //  music=false;
-  //} 
 
 
 
