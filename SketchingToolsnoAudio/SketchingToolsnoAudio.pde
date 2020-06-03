@@ -1,6 +1,6 @@
 import controlP5.*;
 
-PImage[] myEmos = new PImage[8];
+PImage[] myEmos = new PImage[15];
 boolean start=false;
 ControlFrame cf;
 color background;
