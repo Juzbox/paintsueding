@@ -38,7 +38,7 @@ class ControlFrame extends PApplet {
     cp5.addSlider("IMAGE")
       .plugTo(parent, "brush")
       .setRange(0, myEmos.length-1)
-      .setValue(27)
+      .setValue(14)
       .setPosition(30, h-110)
       .setSize(290, 30);
 
