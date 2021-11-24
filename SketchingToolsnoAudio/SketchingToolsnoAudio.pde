@@ -1,6 +1,6 @@
 import controlP5.*;
 
-PImage[] myEmos = new PImage[14];
+PImage[] myEmos = new PImage[3];
 boolean start=false;
 ControlFrame cf;
 color background;
@@ -19,13 +19,15 @@ float soundForce=1;
 boolean rotate=false;
 
 void settings() {
-  size(1500, 850);
+  size(2200, 1200);
+  pixelDensity(displayDensity());
  
 }
 
 void setup() {
  //textureMode(NORMAL);
   //createWindows();
+
   cf = new ControlFrame(this, 400, 800, "Controls");
   surface.setLocation(420, 10);
   noStroke();
@@ -111,5 +113,10 @@ void keyPressed() {
       pixels[i] = pixels[i+int(random(-10, 10))];
     }
     updatePixels();
+  }
+  
+   if (key == ' ') {
+    saveFrame("KRISSIMA-######.tiff");
+    text("printed", 50,height-50);
   }
 }
